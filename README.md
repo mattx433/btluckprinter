@@ -20,6 +20,13 @@ JPG and PNG should work. Your image should be resized to:
 - 96x344 (for 14x50mm paper)
 5. Click Print.
 
+## More info
+Whether this printer (i.e. the Fichero) is 175DPI or 203DPI is unclear. It's probably 203DPI but image dimensions (which are pulled from the app) seem to match 175DPI.
+
+Since the printer seems to always crop off a bit of the image, try to leave at least a 5-7px gap around what's important. The app kind of reveals this by drawing a safe zone over the canvas area.
+
+For some unclear reason, you can't buy 14x30mm white paper refills - the ones sold are 14x50mm, and the only other option is blue/pink/yellow 14x30mm. While AliExpress seems to sell them, they seem to be more expensive - sometimes one roll costs as much as buying a pack of 3 rolls of white 14x50mm labels locally.
+
 ## Known printers
 Tested with:
 - Fichero Label Printer - [Action PL](https://www.action.com/pl-pl/p/3212141/drukarka-etykiet-fichero/)
