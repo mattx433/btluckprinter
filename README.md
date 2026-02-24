@@ -21,5 +21,7 @@ JPG and PNG should work. Your image should be resized to:
 5. Click Print.
 
 ## Known printers
+Tested with:
 - Fichero Label Printer - [Action PL](https://www.action.com/pl-pl/p/3212141/drukarka-etykiet-fichero/)
+Seems identical, so will likely work:
 - Silvercrest Label Printer - [blog post](https://atctwo.net/posts/2024/07/16/thermal-printer.html)
