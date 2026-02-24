@@ -1,5 +1,7 @@
 from serial import Serial
 import escpos.printer
+import argparse
+
 class D11sPrinter:
     def __init__(self, path):
         self.path = path
@@ -50,15 +52,20 @@ class D11sPrinter:
     def finish(self):
         self.feed_label()
         self.stop_print_job()
+
 if __name__ == "__main__":
-    printer = D11sPrinter("/dev/rfcomm0")
+    parser = argparse.ArgumentParser(prog="luckprinter.py", description="Print images with a Fichero printer")
+    parser.add_argument("filename")
+    parser.add_argument("-p", "--port", default="/dev/rfcomm0")
+    args = parser.parse_args()
+    printer = D11sPrinter(args.port)
     printer.open()
     assert printer.get_paper()
     printer.set_density()
     printer.set_label_paper()
     printer.enable_printer()
     dummy = escpos.printer.Dummy(profile="default")
-    dummy.image("test.png")
+    dummy.image(args.filename)
     printer.device.write(dummy.output)
     printer.finish()
     printer.device.flush()

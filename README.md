@@ -9,6 +9,8 @@ The main difference is that this repository is designed to operate in the Blueto
 1. Use your OS bluetooth settings to pair with the printer.
 If the name ends in `_BLE`, wait a bit until it shows up without the BLE suffix.
 2. Run the program.
+There is a PyInstaller packed binary of the GUI in the Releases tab.
+Alternatively `pip install escpos` and run `gui.py`.
 3. Enter the serial port name in the Port box.
 On Windows, you can get this by opening Device Manager.
 
